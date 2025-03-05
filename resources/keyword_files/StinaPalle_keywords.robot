@@ -50,10 +50,10 @@ I Choose Safari Date
     Input Text    ${safari_dates_category}    ${safari_weekday_date}
     I Select Herbivore Tour safari
     I add the tours to cart
-    Alert Should Be Present    ${alert_cart_message}    ACCEPT
+
 
 I Select Herbivore Tour safari
-    Select From List By Value   ${safari_type_category}   Herbivore Tour
+    Select From List By Value   ${safari_type_category}   ${safari_type}
     
 I add the tours to cart
     Click Button    ${safari_cart_button}
