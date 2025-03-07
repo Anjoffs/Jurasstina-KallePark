@@ -17,22 +17,20 @@ Register User
     Then I should see the registration success message    ${successful_message_element}    ${successful_message}
 
 Purchase Regular Tickets
-    [Tags]    new-feature
+    [Tags]    wassim
     [Documentation]    Test for purchasing one regular tickets.
     Given Iam registered and logged in    
     When I Add one Regular Tickets To Cart      ${ticket_type}    ${ticket_option}    ${ticket_quantity}
    
 Book Herbivore Tour
-    [Tags]   wassim
+    [Tags]   new-feature
     [Documentation]    Testar att logga in och boka "Herbivore Tour".
     Given Iam registered and logged in
     When I Choose Safari Date
     Then I Can go To Checkout
 
-
-
 #Book A Herbivore Safari Tour
-    #[Tags]    new-feature-video
+    #[Tags]    new-feature
     #[Documentation]    Kopia av Book Herbivore Tour men omgjord från grunden med nya keywords.
     #Given I Have Navigated To Buy Tickets Page While Logged In
     #When I Add A Regular Ticket And A Safari Tour To Cart
