@@ -20,7 +20,7 @@ Purchase Regular Tickets
     [Tags]    wassim
     [Documentation]    Test for purchasing one regular tickets.
     Given Iam registered and logged in    
-    When I Add one Regular Tickets To Cart      ${ticket_type}    ${ticket_option}    ${ticket_quantity}
+    When I Add one Regular Tickets To Cart
    
 Book Herbivore Tour
     [Tags]   new-feature

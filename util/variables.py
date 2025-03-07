@@ -76,7 +76,7 @@ expected_ticket_quantity = ""
 
 safari_dates_category = "id=safari-date"
 safari_weekend_date = "002025-04-19"
-safari_weekday_date = "002025-05-20"
+safari_weekday_date = "05-20-2025"
 
 safari_type_category = "id=safari-type"
 herbivore_feeding_tour = "Herbivore Tour with Feeding"
