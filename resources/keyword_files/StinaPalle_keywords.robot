@@ -61,7 +61,7 @@ I add the tours to cart
     Alert Should Be Present    ${alert_cart_message}
 
  I Can go To Checkout 
-    Click Element    ${cart_nav_button}
+    #Click Element    ${cart_nav_button}
     Click Button    ${proceed_to_checkout_button}
 
 
