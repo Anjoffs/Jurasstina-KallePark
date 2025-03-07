@@ -1,46 +1,54 @@
+trigger:
+  branches:
+    include:
+    - features/*
+    
+pool:
+  vmImage: 'ubuntu-latest'
+
 steps:
 
-  # 1️⃣ Installera dependencies
+  # Installera dependencies
   - template: templates/install-dependencies.yaml
 
-  # 2️⃣ Installera Xvfb & ffmpeg
-  - script: |
+  # Installera Xvfb & ffmpeg
+  - script:
       sudo apt-get update
       sudo apt-get install -y xvfb ffmpeg
     displayName: 'Install Xvfb & ffmpeg'
 
-  # 3️⃣ Starta Xvfb (Virtuell skärm)
-  - script: |
+  # Starta Xvfb (Virtuell skärm)
+  - script:
       Xvfb :99 -screen 0 1920x1080x24 &
       echo "export DISPLAY=:99" >> ~/.bashrc
       export DISPLAY=:99
     displayName: 'Start Xvfb'
 
-  # 4️⃣ Starta videoinspelningen
-  - script: |
+  # Starta videoinspelningen
+  - script:
       ffmpeg -y -video_size 1920x1080 -framerate 30 -f x11grab -i :99 -codec:v libx264 -preset ultrafast results/test_run.mp4 &
       echo $! > results/ffmpeg_pid.txt
     displayName: 'Start video recording'
 
-  # 5️⃣ 🆕 Debugga om Chrome körs innan testerna startas
+  # Debugga om Chrome körs innan testerna startas
   - script: ps aux | grep chrome
     displayName: 'Check if Chrome is running'
 
-  # 6️⃣ Kör Robot Framework-testerna
-  - script: |
+  # Kör Robot Framework-testerna
+  - script:
       export DISPLAY=:99
       robot --include new-feature-video --output results/logs/output_feature_test.xml --log results/logs/log_feature_test.html --report results/logs/report_feature_test.html tests/
     displayName: 'Run Tests tagged with new-feature-video'
 
-  # 7️⃣ Stoppa videoinspelningen (även om testet failar)
-  - script: |
+  # Stoppa videoinspelningen (även om testet failar)
+  - script:
       if [ -f results/ffmpeg_pid.txt ]; then
         kill $(cat results/ffmpeg_pid.txt)
       fi
     displayName: 'Stop video recording'
     condition: always()
 
-  # 8️⃣ Publicera testresultat och video även vid fail
+  # Publicera testresultat och video även vid fail
   - task: PublishPipelineArtifact@1
     inputs:
       targetPath: '$(System.DefaultWorkingDirectory)/results/test_run.mp4'
