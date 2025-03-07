@@ -36,16 +36,15 @@ I am logged in with valid credentials
     Wait Until Element Is Visible  ${home_section}
   
 I Add one Regular Tickets To Cart
-    [Arguments]    ${ticket_type}    ${ticket_option}    ${ticket_quantity}
     Click Link  ${Ticketlink_element}
     Select From List By Value    ${ticket_type_selector}    ${ticket_type}
     Select From List By Value      ${ticket_category_selector}    ${ticket_option}
-    Input Text    ${ticket_quantity}    1
+    Input Text    id=ticket-quantity    ${two_ticket_quantity}
     Click Button    ${add_to_cart_button}
     Alert Should Be Present   ${alert_cart_message}    ACCEPT
 
 I Choose Safari Date
-    I Add one Regular Tickets To Cart     ${ticket_type}    ${ticket_option}    ${ticket_quantity}
+    I Add one Regular Tickets To Cart
     Execute JavaScript    document.getElementById('safari-section').style.display = 'block'
     Wait Until Element Is Visible    ${safari_type_category}
     Input Text    ${safari_dates_category}    ${safari_weekday_date}
@@ -65,7 +64,7 @@ I add the tours to cart
     Capture Page Screenshot
 
 I Can go To Checkout 
-    #Click Element    ${cart_nav_button}
+    Click Element    ${cart_nav_button}
     Click Button    ${proceed_to_checkout_button}
 
 
