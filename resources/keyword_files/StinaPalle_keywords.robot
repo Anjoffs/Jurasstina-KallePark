@@ -57,11 +57,15 @@ I Select Herbivore Tour safari
     Select From List By Value   ${safari_type_category}   ${safari_type}
     
 I add the tours to cart
+    Capture Page Screenshot
     Click Button    ${safari_cart_button}
-    Alert Should Be Present    ${alert_cart_message}
+    Capture Page Screenshot
+    Sleep    10s
+    Alert Should Be Present    ${alert_cart_message}    ACCEPT
+    Capture Page Screenshot
 
- I Can go To Checkout 
-    Click Element    ${cart_nav_button}
+I Can go To Checkout 
+    #Click Element    ${cart_nav_button}
     Click Button    ${proceed_to_checkout_button}
 
 
