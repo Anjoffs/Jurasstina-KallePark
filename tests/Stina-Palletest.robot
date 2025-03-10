@@ -23,15 +23,15 @@ Purchase Regular Tickets
     When I Add one Regular Tickets To Cart
    
 Book Herbivore Tour
-    [Tags]   new-feature
+    [Tags]   wassim
     [Documentation]    Testar att logga in och boka "Herbivore Tour".
     Given Iam registered and logged in
     When I Choose Safari Date
     Then I Can go To Checkout
 
-#Book A Herbivore Safari Tour
-    #[Tags]    new-feature
-    #[Documentation]    Kopia av Book Herbivore Tour men omgjord från grunden med nya keywords.
-    #Given I Have Navigated To Buy Tickets Page While Logged In
-    #When I Add A Regular Ticket And A Safari Tour To Cart
-    #Then I Want To Proceed To Checkout
+Book A Herbivore Safari Tour
+    [Tags]    new-feature
+    [Documentation]    Kopia av Book Herbivore Tour men omgjord från grunden med nya keywords.
+    Given I Have Navigated To Buy Tickets Page While Logged In
+    When I Add A Regular Ticket And A Safari Tour To Cart
+    Then I Want To Proceed To Checkout
