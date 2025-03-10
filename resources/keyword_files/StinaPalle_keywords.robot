@@ -73,20 +73,20 @@ I Have Navigated To Buy Tickets Page While Logged In
     Go To Buy Tickets Page
 
 Register User
-    Execute Javascript    document.getElementById('register-section').style.display = 'block'
+    Click Element    css=#register-nav a
     Input Text    ${username_register_input_id}    ${valid_username}
     Input Text   ${password_register_input_id}    ${valid_password}
     Click Button    ${register_button}
 
 Logging In
-    Execute JavaScript    document.getElementById('login-section').style.display = 'block'
+    Click Element    css=#login-nav a
     Input Text    ${username_input_id}    ${valid_username}
     Input Text    ${password_input_id}    ${valid_password}
     Click Button    ${login_button}
     Wait Until Element Is Visible    ${cart_visible}
 
 Go To Buy Tickets Page
-    Execute JavaScript    document.getElementById('tickets-section').style.display = 'block'
+    Click Element    css=#tickets-nav a
 
 I Add A Regular Ticket And A Safari Tour To Cart
     Regular Ticket
@@ -103,13 +103,15 @@ Regular Ticket
 Herbivore Safari Tour
     Go To Book Safari Page
     Input Text    ${safari_dates_category}    ${safari_weekday_date}
+    Sleep    5s
     Select From List By Value    ${safari_type_category}    ${safari_type}
+    Sleep    3s
     Click Button    ${safari_cart_button}
     #Alert Should Be Present    ${alert_cart_message}    ACCEPT
     Handle Alert    ACCEPT
 
 Go To Book Safari Page
-    Execute JavaScript    document.getElementById('safari-section').style.display = 'block'
+    Click Element    css=#safari-nav a
     Wait Until Element Is Visible    ${safari_type_category}
 
 I Want To Proceed To Checkout
@@ -118,4 +120,4 @@ I Want To Proceed To Checkout
     Handle Alert    ACCEPT
 
 Go To Cart Page
-    Execute JavaScript    document.getElementById('cart-section').style.display = 'block'
+    Click Element    css=#cart-nav a
