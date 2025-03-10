@@ -97,7 +97,6 @@ Regular Ticket
     Select From List By Value    id=ticket-category    ${regular_ticket_category}
     Input Text    id=ticket-quantity    1
     Click Button    ${add_to_cart_button}
-    #Alert Should Be Present    ${alert_cart_message}    ACCEPT
     Handle Alert    ACCEPT
 
 Herbivore Safari Tour
