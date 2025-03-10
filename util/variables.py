@@ -34,7 +34,6 @@ Ticket_type_selector = "id=ticket-type"
 ticket_type = "Adult"
 Ticketlink_element = '//*[@id="tickets-nav"]/a'
 
-
 invalid_username = "qwerty1234"
 invalid_passwords = ["", "asdf123", "åäö"]
 
@@ -43,7 +42,6 @@ valid_password = "Familj123"
 
 valid_username2 = "Stina-Palle"
 valid_password2 = "Stina4251!"
-
 
 error_message_element_safari = "//*[@id='safari-message']"
 error_message_element = "id=login-message"
@@ -54,8 +52,6 @@ error_message_register = "Username already exists. Please choose another."
 error_message_password_register = "Password must be at least 8 characters long."
 successful_message_element = "id=register-message"
 successful_message = "Registration successful! Redirecting to login..."
-
-
 
 buy_tickets = "id=tickets-nav"
 cart_visible = "id=cart-nav"

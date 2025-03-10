@@ -1,12 +1,11 @@
 #Grupp 6 - Andreas J, Wassim, Martin.
 
 *** Settings ***
-Documentation    Testing the JuraStinaKallePark Page
+Documentation    Testing the JuraStinaKallePark Page for the scenario Kim med familjen.
 Library    SeleniumLibrary
 Variables   ${EXECDIR}/util/variables.py
 Resource    ${EXECDIR}/resources/keyword_files/Keywords.robot
 Resource    ${EXECDIR}/resources/keyword_files/KimMedFamiljen_keywords.robot
-Resource    ${EXECDIR}/resources/keyword_files/StinaPalle_keywords.robot
 Test Setup    Open Page And Register User
 Test Teardown    Close Browser
 

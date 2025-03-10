@@ -51,7 +51,6 @@ I Choose Safari Date
     I Select Herbivore Tour safari
     I add the tours to cart
 
-
 I Select Herbivore Tour safari
     Select From List By Value   ${safari_type_category}   ${safari_type}
     
@@ -106,7 +105,6 @@ Herbivore Safari Tour
     Select From List By Value    ${safari_type_category}    ${safari_type}
     Sleep    3s
     Click Button    ${safari_cart_button}
-    #Alert Should Be Present    ${alert_cart_message}    ACCEPT
     Handle Alert    ACCEPT
 
 Go To Book Safari Page
