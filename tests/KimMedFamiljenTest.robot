@@ -12,7 +12,7 @@ Test Teardown    Close Browser
 *** Test Cases ***
 
 Invalid Login
-    [Tags]   Andreas
+    [Tags]   new-feature
     [Documentation]    Testing an invalid login
     Given I Navigated To The Login Site
     When I Enter An Invalid Username And Password
@@ -20,7 +20,7 @@ Invalid Login
     Then I Should See An Error Message
 
 Valid Login
-    [Tags]    Andreas
+    [Tags]    new-feature
     [Documentation]    Testing a valid login
     Given I Navigated To The Login Site
     When I Enter A Valid Username And Password
@@ -28,7 +28,7 @@ Valid Login
     Then I Should Be Logged In
 
 Purchase Adult VIP-Tickets
-    [Tags]    Martin
+    [Tags]    new-feature
     [Documentation]    Testing that you can buy two adult vip-tickets
     Given I Have Logged In With Valid Credentials
     And I Navigate To The Buy Tickets Page
@@ -37,7 +37,7 @@ Purchase Adult VIP-Tickets
     And I Can Proceed To Checkout
 
 Purchase Child VIP-Tickets
-    [Tags]    Martin
+    [Tags]    new-feature
     [Documentation]    Testing that you can buy two child vip-tickets
     Given I Have Logged In With Valid Credentials
     And I Navigate To The Buy Tickets Page
@@ -46,7 +46,7 @@ Purchase Child VIP-Tickets
     And I Can Proceed To Checkout
 
 Purchase Safari With Close Encounter On Weekend
-    [Tags]    Martin / Andreas
+    [Tags]    new-feature
     [Documentation]    Testing that you can buy safari with close encounter on weekend
     Given I am logged In And Have VIP-Tickets
     And I Navigate To The Book Safaris Page
