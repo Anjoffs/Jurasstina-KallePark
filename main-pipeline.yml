@@ -1,6 +1,8 @@
 trigger: none
 pr:
 - main
+exclude:
+- feature
 
 pool:
   vmImage: 'ubuntu-latest'

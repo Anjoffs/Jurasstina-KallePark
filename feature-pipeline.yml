@@ -19,6 +19,6 @@ steps:
       targetPath: '$(System.DefaultWorkingDirectory)/results/logs/'
       artifactName: 'robot-reports-feature'
     displayName: 'Publish Robot Framework Reports'
-    condition: always()
+
 
 
