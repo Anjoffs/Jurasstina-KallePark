@@ -7,7 +7,6 @@ current_directory = os.getcwd().replace('\\', '/')
 
 #variables
 browser = "headlesschrome"
-#url = f"{current_directory}/JuraStinaKallePark/jurap.html"
 title = "Jura-Stina-Kalle Park"
 
 username_register_input_id ="id=reg-username"
