@@ -9,7 +9,7 @@ Test Teardown    Close Browser
 *** Test Cases ***
 
 Register User
-    [Tags]   Wassim
+    [Tags]   New-feature
     [Documentation]    Test to register a new user and verify success message.
     ${valid_username2}    Set Variable    Stina-Palle
     ${valid_password2}    Set Variable    Stina4251!
@@ -17,13 +17,13 @@ Register User
     Then I should see the registration success message    ${successful_message_element}    ${successful_message}
 
 Purchase Regular Tickets
-    [Tags]    wassim
+    [Tags]    New-feature
     [Documentation]    Test for purchasing one regular tickets.
     Given Iam registered and logged in    
     When I Add one Regular Tickets To Cart
    
 Book Herbivore Tour
-    [Tags]   wassim
+    [Tags]   New-feature
     [Documentation]    Testar att logga in och boka "Herbivore Tour".
     Given Iam registered and logged in
     When I Choose Safari Date
