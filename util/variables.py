@@ -29,7 +29,7 @@ home_section = "id=home-section"
 ticket_quantity = "id=ticket-quantity"
 ticket_category_selector = "id=ticket-category"
 ticket_option = "Regular"
-Ticket_type_selector = "id=ticket-type"
+ticket_type_selector = "id=ticket-type"
 ticket_type = "Adult"
 Ticketlink_element = '//*[@id="tickets-nav"]/a'
 
@@ -54,6 +54,7 @@ successful_message = "Registration successful! Redirecting to login..."
 
 buy_tickets = "id=tickets-nav"
 cart_visible = "id=cart-nav"
+cart_details = "css=#cart-details"
 
 test_variable = "Hello, Robot!"
 
