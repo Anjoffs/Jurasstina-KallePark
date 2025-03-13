@@ -90,17 +90,17 @@ I Added Two Child VIP-tickets To Cart
 Select Ticket Type
     [Tags]    Martin
     [Arguments]    ${adult_ticket_type}
-    Select From List By Value    id=ticket-type    ${adult_ticket_type}
+    Select From List By Value    ${ticket_type_selector}    ${adult_ticket_type}
 
 Select Ticket Category
     [Tags]    Martin
     [Arguments]    ${vip_ticket_category}
-    Select From List By Value    id=ticket-category    ${vip_ticket_category}
+    Select From List By Value    ${ticket_category_selector}    ${vip_ticket_category}
 
 Select Ticket Quantity
     [Tags]    Martin
     [Arguments]    ${two_ticket_quantity}
-    Input Text    id=ticket-quantity    ${two_ticket_quantity}
+    Input Text    ${ticket_quantity}    ${two_ticket_quantity}
 
 Select Safari Weekend Date
     [Tags]    Andreas
@@ -119,7 +119,7 @@ The Cart Should Be Updated
 Verify Cart Quantity
     [Tags]    Martin
     [Arguments]    ${expected_ticket_quantity}
-    ${cart_text}    Get Text    css=#cart-details
+    ${cart_text}    Get Text    ${cart_details}
     Should Contain    ${cart_text}    ${expected_ticket_quantity}
 
 I Can Proceed To Checkout
